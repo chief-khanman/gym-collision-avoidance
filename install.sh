@@ -12,13 +12,13 @@ if $MAKE_VENV; then
     export PYTHONPATH=/usr/bin/python3 # point to your python3
     python3 -m pip install virtualenv
     cd $DIR
-    python3 -m virtualenv venv
+    python3 -m virtualenv gym_ca_venv
 fi
 
 if $SOURCE_VENV; then
     cd $DIR
-    source venv/bin/activate
-    export PYTHONPATH=${DIR}/venv/bin/python/dist-packages
+    source gym_ca_venv/bin/activate
+    export PYTHONPATH=${DIR}/gym_ca_venv/bin/python/dist-packages
 fi
 
 # Install this pkg and its requirements
